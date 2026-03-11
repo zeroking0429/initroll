@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자리 뽑기</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gmarket+Sans:wght@300;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🎲 <span>자리 뽑기</span></h1>
+
+    <div class="controls glass">
+      <div class="row">
+        <label>행</label>
+        <input id="rows" type="number" value="4" min="1" />
+        <label>열</label>
+        <input id="cols" type="number" value="4" min="1" />
+      </div>
+      <div class="row">
+        <label>번호 시작</label>
+        <input id="startNum" type="number" value="1" />
+        <label>번호 끝</label>
+        <input id="endNum" type="number" value="16" />
+      </div>
+      <div class="divider"></div>
+      <div class="row">
+        <label>모둠 크기</label>
+        <input id="groupSize" type="number" value="4" min="2" />
+      </div>
+      <div class="buttons">
+        <button id="createBtn">자리 생성</button>
+        <button id="shuffleBtn">🔀 랜덤 자리</button>
+        <button id="groupBtn" class="primary">👥 모둠 만들기</button>
+      </div>
+    </div>
+
+    <div id="classroomWrap">
+      <button id="backBtn">← 자리 배치로 돌아가기</button>
+      <p class="mode-label" id="modeLabel"></p>
+      <div id="classroom"></div>
+      <div id="groupView"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
